@@ -2,4 +2,10 @@
     <string name="app_name">ShoeStore</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="join_now">Join Now</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="let_s_get">Let\'s Get</string>
+    <string name="started">Started</string>
+    <string name="buy_premium_and_authentic_shoes_online_and_get_it_delivered_right_at_your_doorstep">Buy premium and authentic shoes online and get it delivered right at your doorstep.</string>
+    <string name="banner">banner</string>
 </resources>

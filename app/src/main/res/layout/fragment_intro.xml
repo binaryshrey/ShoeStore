@@ -1,14 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.intro.IntroFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/introLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/introColor"
+        tools:context=".ui.intro.IntroFragment">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/letsGetTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="32dp"
+            android:text="@string/let_s_get"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_32"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bannerImageView" />
+
+        <TextView
+            android:id="@+id/startedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:text="@string/started"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_32"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/letsGetTextView" />
+
+        <TextView
+            android:id="@+id/tagLineTextView"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:text="@string/buy_premium_and_authentic_shoes_online_and_get_it_delivered_right_at_your_doorstep"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/startedTextView" />
+
+        <ImageView
+            android:id="@+id/bannerImageView"
+            android:layout_width="@dimen/dimen_480"
+            android:layout_height="@dimen/dimen_320"
+            android:layout_marginTop="@dimen/dimen_32"
+            android:rotation="-15"
+            android:scaleType="fitEnd"
+            android:src="@drawable/banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/banner" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startedButton"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_56"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:backgroundTint="@color/white"
+            android:text="@string/join_now"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:cornerRadius="@dimen/dimen_8"
+            app:layout_constraintBottom_toTopOf="@+id/alreadyButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/alreadyButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:text="@string/already_have_an_account_login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/dimen_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
