@@ -8,4 +8,5 @@
     <dimen name="dimen_480">480dp</dimen>
     <dimen name="dimen_320">320dp</dimen>
     <dimen name="dimen_56">56dp</dimen>
+    <dimen name="dimen_40">40sp</dimen>
 </resources>
