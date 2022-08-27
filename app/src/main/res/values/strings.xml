@@ -33,4 +33,9 @@
     <string name="size">Size : 9</string>
     <string name="title">Nike Air Max 97</string>
     <string name="cost">Price : $320</string>
+    <string name="shoe_title">Shoe Title</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="shoe_cost">Shoe Cost</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="submit">Submit</string>
 </resources>
