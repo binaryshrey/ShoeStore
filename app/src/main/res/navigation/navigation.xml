@@ -47,5 +47,15 @@
     <fragment
         android:id="@+id/introOnboardingFragment"
         android:name="dev.shreyansh.shoestore.ui.onboarding.IntroOnboardingFragment"
-        android:label="IntroOnboardingFragment" />
+        android:label="IntroOnboardingFragment" >
+        <action
+            android:id="@+id/action_introOnboardingFragment_to_outroOnboardingFragment"
+            app:destination="@id/outroOnboardingFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/outroOnboardingFragment"
+        android:name="dev.shreyansh.shoestore.ui.onboarding.OutroOnboardingFragment"
+        android:label="OutroOnboardingFragment" />
 </navigation>
