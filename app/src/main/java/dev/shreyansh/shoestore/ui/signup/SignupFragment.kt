@@ -31,7 +31,7 @@ class SignupFragment : Fragment() {
         viewModel.getStarted.observe(viewLifecycleOwner) { hasStarted ->
             if (hasStarted) {
                 viewModel.onGetStartedComplete()
-                //findNavController().navigate(R.id.action_introFragment_to_signupFragment)
+                findNavController().navigate(R.id.action_signupFragment_to_introOnboardingFragment)
             }
         }
         viewModel.login.observe(viewLifecycleOwner) { loggedIn ->
