@@ -14,4 +14,11 @@
     <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
     <string name="create_account">Create Account</string>
     <string name="connect_with_the_online_store_today">Connect with the online store today!</string>
+    <string name="shoe_store">Shoe Store</string>
+    <string name="welcomeBack">Hi, Welcome Back! &#128075;</string>
+    <string name="hello_again_you_ve_been_missed">Hello again, you\'ve been missed!</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
 </resources>

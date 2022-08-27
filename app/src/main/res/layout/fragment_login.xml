@@ -5,52 +5,50 @@
 
     <data>
         <variable
-            name="signUpViewModel"
+            name="loginViewModel"
             type="dev.shreyansh.shoestore.viewmodel.ShoeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/signUpLayout"
+        android:id="@+id/loginLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.signup.SignupFragment">
-
+        tools:context=".ui.login.LoginFragment">
 
         <TextView
-            android:id="@+id/createAccTextView"
+            android:id="@+id/welcomeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16"
             android:layout_marginTop="@dimen/dimen_32"
-            android:text="@string/create_account"
+            android:text="@string/welcomeBack"
             android:textColor="@color/black"
             android:textSize="@dimen/dimen_20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/createAccTagTextView"
+            android:id="@+id/welcomeTagTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16"
             android:layout_marginTop="@dimen/dimen_16"
-            android:text="@string/connect_with_the_online_store_today"
+            android:text="@string/hello_again_you_ve_been_missed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/createAccTextView" />
-
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
+            android:id="@+id/emailLogin"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16"
-            android:layout_marginTop="@dimen/dimen_48"
+            android:layout_marginTop="48dp"
             android:layout_marginEnd="@dimen/dimen_16"
             android:hint="@string/email_address"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/createAccTagTextView"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTagTextView"
             app:startIconContentDescription="@string/email_address"
             app:startIconDrawable="@drawable/ic_baseline_email_24">
 
@@ -61,28 +59,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_16"
-            android:layout_marginTop="@dimen/dimen_16"
-            android:layout_marginEnd="@dimen/dimen_16"
-            android:hint="@string/username"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email"
-            app:startIconContentDescription="@string/username"
-            app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/pwd"
+            android:id="@+id/pwdLogin"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,7 +69,7 @@
             android:hint="@string/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username"
+            app:layout_constraintTop_toBottomOf="@+id/emailLogin"
             app:startIconContentDescription="@string/password"
             app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
@@ -100,54 +77,66 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
-            android:id="@+id/terms"
+            android:id="@+id/rem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_12"
             android:layout_marginTop="@dimen/dimen_8"
             android:checked="true"
-            android:text="@string/i_agree_to_the_terms_and_conditions"
+            android:text="@string/remember_me"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pwd" />
+            app:layout_constraintTop_toBottomOf="@+id/pwdLogin" />
+
+        <TextView
+            android:id="@+id/ForgotTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/forgot_password"
+            android:textColor="#D32F2F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pwdLogin" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/startedButton"
+            android:id="@+id/loginButton"
             android:layout_width="@dimen/dimen_0"
             android:layout_height="@dimen/dimen_56"
             android:layout_marginStart="@dimen/dimen_16"
             android:layout_marginEnd="@dimen/dimen_16"
             android:backgroundTint="@color/colorPrimaryVariant"
-            android:onClick="@{() -> signUpViewModel.onGetStarted()}"
-            android:text="@string/join_now"
+            android:text="@string/login"
             android:textAllCaps="false"
+            android:onClick="@{() -> loginViewModel.onLogin()}"
             android:textColor="@color/black"
             app:cornerRadius="@dimen/dimen_8"
-            app:layout_constraintBottom_toTopOf="@+id/alreadyButton"
+            app:layout_constraintBottom_toTopOf="@+id/noAccButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
+
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/alreadyButton"
+            android:id="@+id/noAccButton"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16"
             android:layout_marginEnd="@dimen/dimen_16"
             android:layout_marginBottom="@dimen/dimen_16"
-            android:onClick="@{() -> signUpViewModel.onLogin()}"
-            android:text="@string/already_have_an_account_login"
+            android:text="@string/don_t_have_an_account_sign_up"
             android:textAllCaps="false"
             android:textColor="@color/black"
+            android:onClick="@{() -> loginViewModel.onGetStarted()}"
             app:cornerRadius="@dimen/dimen_8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
