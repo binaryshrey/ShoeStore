@@ -6,12 +6,15 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import dev.shreyansh.shoestore.R
 import dev.shreyansh.shoestore.databinding.FragmentHomeBinding
+import dev.shreyansh.shoestore.viewmodel.ShoeViewModel
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding : FragmentHomeBinding
+    val viewModel: ShoeViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,7 +24,16 @@ class HomeFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.title = "Shoe Store"
 
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home, container, false)
+        binding.homeViewModel = viewModel
+        viewModel.addShoe.observe(viewLifecycleOwner) {addedShoe ->
+            if (addedShoe){
+                viewModel.onAddShoeComplete()
+
+            }
+        }
         setHasOptionsMenu(true)
+
+
         return binding.root
     }
 
