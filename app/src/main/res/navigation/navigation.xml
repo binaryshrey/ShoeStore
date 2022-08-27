@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/introFragment"
         android:name="dev.shreyansh.shoestore.ui.intro.IntroFragment"
-        android:label="IntroFragment" />
+        android:label="IntroFragment" >
+        <action
+            android:id="@+id/action_introFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="dev.shreyansh.shoestore.ui.signup.SignupFragment"
+        android:label="SignupFragment" />
 </navigation>

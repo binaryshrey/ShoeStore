@@ -9,4 +9,8 @@
     <dimen name="dimen_320">320dp</dimen>
     <dimen name="dimen_56">56dp</dimen>
     <dimen name="dimen_40">40sp</dimen>
+    <dimen name="dimen_20sp">20sp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_64">64dp</dimen>
 </resources>

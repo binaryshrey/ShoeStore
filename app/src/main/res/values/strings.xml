@@ -8,4 +8,10 @@
     <string name="started">Started</string>
     <string name="buy_premium_and_authentic_shoes_online_and_get_it_delivered_right_at_your_doorstep">Buy premium and authentic shoes online and get it delivered right at your doorstep.</string>
     <string name="banner">banner</string>
+    <string name="email_address">Email address</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
+    <string name="create_account">Create Account</string>
+    <string name="connect_with_the_online_store_today">Connect with the online store today!</string>
 </resources>
