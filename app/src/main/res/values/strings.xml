@@ -28,4 +28,9 @@
     <string name="finish">Finish</string>
     <string name="free_home_delivery">Free Home Delivery</string>
     <string name="get_your_shoes_delivered_at_your_doorstep">Get your shoes delivered at your doorstep.</string>
+    <string name="description">Nike Air Max Summer Collection</string>
+    <string name="price">$320</string>
+    <string name="size">Size : 9</string>
+    <string name="title">Nike Air Max 97</string>
+    <string name="cost">Price : $320</string>
 </resources>
