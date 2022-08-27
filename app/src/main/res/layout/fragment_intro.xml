@@ -17,29 +17,19 @@
         tools:context=".ui.intro.IntroFragment">
 
         <TextView
-            android:id="@+id/letsGetTextView"
+            android:id="@+id/shoeStore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_16"
-            android:layout_marginTop="@dimen/dimen_64"
-            android:text="@string/let_s_get"
+            android:layout_marginTop="@dimen/dimen_84"
+            android:text="@string/shoe_store"
             android:textColor="@color/white"
             android:textSize="@dimen/dimen_40"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bannerImageView" />
 
-        <TextView
-            android:id="@+id/startedTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_16"
-            android:text="@string/started"
-            android:textColor="@color/white"
-            android:textSize="@dimen/dimen_40"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/letsGetTextView" />
+
 
         <TextView
             android:id="@+id/tagLineTextView"
@@ -54,7 +44,7 @@
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/startedTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/shoeStore" />
 
         <ImageView
             android:id="@+id/bannerImageView"
