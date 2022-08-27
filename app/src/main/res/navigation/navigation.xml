@@ -25,6 +25,11 @@
             android:id="@+id/action_signupFragment_to_loginFragment"
             app:destination="@id/loginFragment"
             app:popUpTo="@id/introFragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_introOnboardingFragment"
+            app:destination="@id/introOnboardingFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -33,5 +38,14 @@
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
             app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_introOnboardingFragment"
+            app:destination="@id/introOnboardingFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/introOnboardingFragment"
+        android:name="dev.shreyansh.shoestore.ui.onboarding.IntroOnboardingFragment"
+        android:label="IntroOnboardingFragment" />
 </navigation>
