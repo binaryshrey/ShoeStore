@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <data>
+        <variable
+            name="introOnboardViewModel"
+            type="dev.shreyansh.shoestore.viewmodel.ShoeViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/introOnboardingLayout"
         android:layout_width="match_parent"
@@ -18,6 +25,7 @@
             android:layout_marginBottom="@dimen/dimen_16"
             android:text="@string/next"
             android:textColor="@color/black"
+            android:onClick="@{() -> introOnboardViewModel.onIntroOnboarding()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

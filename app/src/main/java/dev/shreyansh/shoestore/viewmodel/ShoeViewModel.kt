@@ -14,9 +14,14 @@ class ShoeViewModel : ViewModel() {
     val login : LiveData<Boolean>
         get() = _login
 
+    private val _introOnboarding = MutableLiveData<Boolean>()
+    val introOnboarding : LiveData<Boolean>
+        get() = _introOnboarding
+
     init {
         _getStarted.value = false
         _login.value = false
+        _introOnboarding.value = false
 
     }
 
@@ -34,5 +39,13 @@ class ShoeViewModel : ViewModel() {
 
     fun onLoginComplete(){
         _login.value = false
+    }
+
+    fun onIntroOnboarding(){
+        _introOnboarding.value = true
+    }
+
+    fun onIntroOnboardingComplete(){
+        _introOnboarding.value = false
     }
 }
