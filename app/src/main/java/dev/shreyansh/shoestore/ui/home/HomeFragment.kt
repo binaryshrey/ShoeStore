@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import dev.shreyansh.shoestore.R
 import dev.shreyansh.shoestore.databinding.FragmentHomeBinding
 import dev.shreyansh.shoestore.viewmodel.ShoeViewModel
@@ -28,6 +29,7 @@ class HomeFragment : Fragment() {
         viewModel.addShoe.observe(viewLifecycleOwner) {addedShoe ->
             if (addedShoe){
                 viewModel.onAddShoeComplete()
+                findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
 
             }
         }
