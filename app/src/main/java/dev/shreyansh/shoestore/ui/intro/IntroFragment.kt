@@ -37,6 +37,12 @@ class IntroFragment : Fragment() {
                 findNavController().navigate(R.id.action_introFragment_to_signupFragment)
             }
         }
+        viewModel.login.observe(viewLifecycleOwner) { loggedIn ->
+            if (loggedIn) {
+                viewModel.onLoginComplete()
+                findNavController().navigate(R.id.action_introFragment_to_loginFragment)
+            }
+        }
 
         return binding.root
     }

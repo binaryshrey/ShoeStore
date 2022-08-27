@@ -88,6 +88,7 @@
             android:text="@string/already_have_an_account_login"
             android:textAllCaps="false"
             android:textColor="@color/white"
+            android:onClick="@{() -> viewModel.onLogin()}"
             app:cornerRadius="@dimen/dimen_8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -2,144 +2,152 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/signUpLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.signup.SignupFragment">
 
-    <TextView
-        android:id="@+id/createAccTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_16"
-        android:layout_marginTop="@dimen/dimen_32"
-        android:text="@string/create_account"
-        android:textColor="@color/black"
-        android:textSize="@dimen/dimen_20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
+        <variable
+            name="signUpViewModel"
+            type="dev.shreyansh.shoestore.viewmodel.ShoeViewModel" />
+    </data>
 
-    <TextView
-        android:id="@+id/createAccTagTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_16"
-        android:layout_marginTop="@dimen/dimen_16"
-        android:text="@string/connect_with_the_online_store_today"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccTextView" />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signUpLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_16"
-        android:layout_marginTop="@dimen/dimen_48"
-        android:layout_marginEnd="@dimen/dimen_16"
-        android:hint="@string/email_address"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccTagTextView"
-        app:startIconContentDescription="@string/email_address"
-        app:startIconDrawable="@drawable/ic_baseline_email_24">
+        android:layout_height="match_parent"
+        tools:context=".ui.signup.SignupFragment">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/createAccTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_32"
+            android:text="@string/create_account"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_16"
-        android:layout_marginTop="@dimen/dimen_16"
-        android:layout_marginEnd="@dimen/dimen_16"
-        android:hint="@string/username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:startIconContentDescription="@string/username"
-        app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
+        <TextView
+            android:id="@+id/createAccTagTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:text="@string/connect_with_the_online_store_today"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createAccTextView" />
 
-        <com.google.android.material.textfield.TextInputEditText
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_48"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:hint="@string/email_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createAccTagTextView"
+            app:startIconContentDescription="@string/email_address"
+            app:startIconDrawable="@drawable/ic_baseline_email_24">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pwd"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_16"
-        android:layout_marginTop="@dimen/dimen_16"
-        android:layout_marginEnd="@dimen/dimen_16"
-        android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        app:startIconContentDescription="@string/password"
-        app:startIconDrawable="@drawable/ic_baseline_lock_24">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:hint="@string/username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:startIconContentDescription="@string/username"
+            app:startIconDrawable="@drawable/ic_baseline_account_circle_24">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <CheckBox
-        android:id="@+id/terms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_12"
-        android:layout_marginTop="@dimen/dimen_8"
-        android:checked="true"
-        android:text="@string/i_agree_to_the_terms_and_conditions"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwd" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/startedButton"
-        android:layout_width="@dimen/dimen_0"
-        android:layout_height="@dimen/dimen_56"
-        android:layout_marginStart="@dimen/dimen_16"
-        android:layout_marginEnd="@dimen/dimen_16"
-        android:backgroundTint="@color/colorPrimaryVariant"
-        android:text="@string/join_now"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        app:cornerRadius="@dimen/dimen_8"
-        app:layout_constraintBottom_toTopOf="@+id/alreadyButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pwd"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:hint="@string/password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+            app:startIconContentDescription="@string/password"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/alreadyButton"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="@dimen/dimen_0"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_16"
-        android:layout_marginEnd="@dimen/dimen_16"
-        android:layout_marginBottom="@dimen/dimen_16"
-        android:text="@string/already_have_an_account_login"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        app:cornerRadius="@dimen/dimen_8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:checked="true"
+            android:text="@string/i_agree_to_the_terms_and_conditions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pwd" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startedButton"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_56"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:backgroundTint="@color/colorPrimaryVariant"
+            android:onClick="@{() -> signUpViewModel.onGetStarted()}"
+            android:text="@string/join_now"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:cornerRadius="@dimen/dimen_8"
+            app:layout_constraintBottom_toTopOf="@+id/alreadyButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/alreadyButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:onClick="@{() -> signUpViewModel.onLogin()}"
+            android:text="@string/already_have_an_account_login"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:cornerRadius="@dimen/dimen_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
