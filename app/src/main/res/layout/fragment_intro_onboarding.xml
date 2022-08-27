@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/introOnboardingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.onboarding.IntroOnboardingFragment">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nextButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:text="@string/next"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/onboard1imageView"
+            android:layout_width="@dimen/dimen_320"
+            android:layout_height="@dimen/dimen_320"
+            android:layout_marginTop="@dimen/dimen_64"
+            android:src="@drawable/onboard1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/introonboarding" />
+
+        <TextView
+            android:id="@+id/buyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:text="@string/buy_shoes_online"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onboard1imageView" />
+
+        <TextView
+            android:id="@+id/buyTagTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:text="@string/explore_vast_selection_of_prodcuts_from_top_brands"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buyTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
