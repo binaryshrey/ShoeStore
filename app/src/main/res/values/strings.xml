@@ -21,4 +21,11 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="login">Login</string>
     <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="buy_shoes_online">Buy Shoes Online</string>
+    <string name="explore_vast_selection_of_prodcuts_from_top_brands">Explore vast selection of prodcuts from top brands.</string>
+    <string name="next">Next</string>
+    <string name="introonboarding">introOnboarding</string>
+    <string name="finish">Finish</string>
+    <string name="free_home_delivery">Free Home Delivery</string>
+    <string name="get_your_shoes_delivered_at_your_doorstep">Get your shoes delivered at your doorstep.</string>
 </resources>

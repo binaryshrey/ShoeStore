@@ -37,11 +37,10 @@ class LoginFragment : Fragment() {
         viewModel.login.observe(viewLifecycleOwner) { loggedIn ->
             if (loggedIn) {
                 viewModel.onLoginComplete()
-                //findNavController().navigate(R.id.action_signupFragment_to_loginFragment)
+                findNavController().navigate(R.id.action_loginFragment_to_introOnboardingFragment)
             }
         }
 
-        return binding.root
         return binding.root
     }
 
